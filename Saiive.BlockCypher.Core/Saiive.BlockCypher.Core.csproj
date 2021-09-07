@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Authors>p3root | Patrik</Authors>
+    <Company>saiive.live DeFi Wallet GmbH</Company>
+    <PackageProjectUrl>https://github.com/saiive/saiive.blockcypher.core</PackageProjectUrl>
+    <Version>0.0.1</Version>
+  </PropertyGroup>
+
+
+	<ItemGroup>
+		<PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+	</ItemGroup>
+
+</Project>
