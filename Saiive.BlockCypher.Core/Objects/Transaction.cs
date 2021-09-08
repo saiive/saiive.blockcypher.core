@@ -5,7 +5,7 @@ using Newtonsoft.Json;
 
 #endregion
 
-namespace BlockCypher.Objects {
+namespace Saiive.BlockCypher.Core.Objects {
     public class Transaction {
         [JsonProperty("addresses")]
         public IList<string> Addresses { get; set; }

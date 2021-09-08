@@ -4,8 +4,10 @@ using Newtonsoft.Json;
 
 #endregion
 
-namespace BlockCypher.Objects {
-    public class AddressBalance : BaseObject {
+namespace Saiive.BlockCypher.Core.Objects
+{
+    public class AddressBalance : BaseObject
+    {
         [JsonProperty("address")]
         public string Address { get; set; }
 

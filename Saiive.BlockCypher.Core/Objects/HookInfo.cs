@@ -3,7 +3,7 @@ using Newtonsoft.Json;
 
 #endregion
 
-namespace BlockCypher.Objects {
+namespace Saiive.BlockCypher.Core.Objects {
     public class HookInfo : BaseObject {
         [JsonProperty("address")]
         public string Address { get; set; }

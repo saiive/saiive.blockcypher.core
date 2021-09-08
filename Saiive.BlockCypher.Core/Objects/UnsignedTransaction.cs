@@ -4,7 +4,7 @@ using Newtonsoft.Json;
 
 #endregion
 
-namespace BlockCypher.Objects {
+namespace Saiive.BlockCypher.Core.Objects {
     public class UnsignedTransaction : BaseObject {
         [JsonProperty("pubkeys")]
         public IList<string> PubKeys { get; set; }

@@ -1,4 +1,5 @@
-namespace BlockCypher {
+namespace Saiive.BlockCypher.Core
+{
     public enum HookEvent {
         UnconfirmedTransaction,
         NewBlock,

@@ -5,7 +5,7 @@ using Newtonsoft.Json;
 
 #endregion
 
-namespace BlockCypher.Objects {
+namespace Saiive.BlockCypher.Core.Objects {
     public class SatoshiConverter : JsonConverter {
         public override bool CanConvert(Type objectType) {
             var types = new[] {

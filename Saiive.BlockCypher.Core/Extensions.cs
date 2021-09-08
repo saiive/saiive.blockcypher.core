@@ -7,7 +7,7 @@ using Newtonsoft.Json;
 
 #endregion
 
-namespace BlockCypher.Pcl {
+namespace Saiive.BlockCypher.Core.Pcl {
     public static class Extensions {
         [DebuggerStepThrough]
         public static byte[] FromHexString(this string str) {

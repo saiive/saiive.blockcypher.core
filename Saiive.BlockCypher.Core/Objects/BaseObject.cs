@@ -6,7 +6,7 @@ using Newtonsoft.Json.Linq;
 
 #endregion
 
-namespace BlockCypher.Objects {
+namespace Saiive.BlockCypher.Core.Objects {
     public class BaseObject {
         [JsonProperty("error")]
         public string Error { get; set; }

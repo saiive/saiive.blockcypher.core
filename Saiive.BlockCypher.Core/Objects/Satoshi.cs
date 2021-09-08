@@ -3,7 +3,7 @@ using Newtonsoft.Json;
 
 #endregion
 
-namespace BlockCypher.Objects {
+namespace Saiive.BlockCypher.Core.Objects {
     [JsonConverter(typeof(SatoshiConverter))]
     public class Satoshi {
         public decimal Btc {
