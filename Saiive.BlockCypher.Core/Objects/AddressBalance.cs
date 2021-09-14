@@ -8,6 +8,11 @@ namespace Saiive.BlockCypher.Core.Objects
 {
     public class AddressBalance : BaseObject
     {
+        public AddressBalance()
+        {
+            Transactions = new List<TxReference>();
+        }
+
         [JsonProperty("address")]
         public string Address { get; set; }
 

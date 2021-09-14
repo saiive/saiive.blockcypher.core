@@ -210,12 +210,23 @@ namespace Saiive.BlockCypher.Core
 
             var list = new List<Transaction>();
 
-            foreach (string url in groups.Select(g => string.Format("txs/{0}", string.Join(";", g))))
+            foreach (var url in groups.Select(g => g.ToList()))
             {
-                var transactions = await GetAsync<Transaction[]>(url);
+                var txsUrl = string.Format("txs/{0}", string.Join(";", url));
+                if (url.Count == 1)
+                {
+                    var transactions = await GetAsync<Transaction>(txsUrl);
 
-                if (transactions != null)
-                    list.AddRange(transactions);
+                    if (transactions != null)
+                        list.Add(transactions);
+                }
+                else
+                {
+                    var transactions = await GetAsync<Transaction[]>(txsUrl);
+
+                    if (transactions != null)
+                        list.AddRange(transactions);
+                }
             }
 
             return list.OrderBy(t => t.Confirmed).ToArray();
