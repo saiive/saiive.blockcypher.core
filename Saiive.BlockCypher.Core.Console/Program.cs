@@ -13,7 +13,7 @@ namespace Saiive.BlockCypher.Core.ConsoleA
             var txs = await instance.GetTransactions("2N9mnZJzKcd7D4XmdRGbryYZ9y9WoknvFrA");
             var txs2 = await instance.GetTransactions("2Mtka3uLZCq94Ezyb8qxGyH7rpeu4GDnLzi");
 
-            var response = await instance.SendRawTransaction("01000000011935b41d12936df99d322ac8972b74ecff7b79408bbccaf1b2eb8015228beac8000000006b483045022100921fc36b911094280f07d8504a80fbab9b823a25f102e2bc69b14bcd369dfc7902200d07067d47f040e724b556e5bc3061af132d5a47bd96e901429d53c41e0f8cca012102152e2bb5b273561ece7bbe8b1df51a4c44f5ab0bc940c105045e2cc77e618044ffffffff0240420f00000000001976a9145fb1af31edd2aa5a2bbaa24f6043d6ec31f7e63288ac20da3c00000000001976a914efec6de6c253e657a9d5506a78ee48d89762fb3188ac00000000");
+            var response = await instance.SendRawTransaction("02000000000101420390fd05aa57b4fb8a2d80e293dca767b1bdac64ef81b88f394a80f01896170000000000ffffffff011085010000000000160014fe249ea942236e74ad4763e0e7acaf9e2cdfc8630247304402205cc6c8224e0587a4ba2991e0b6ff001a9e8b865ca1fdbcc430cdf5fb6c0f242002201a3d1b905f44f5624fdc511c825b7bb6faad9688850a6f0ce1a0551121e50d46012103b8e5ae051b1c56fa7b05081cffd064a9d026bf0583cd3c68a21025f3e45d14ff00000000");
 
             var tx = await instance.GetUnspentTransactionReference("3GyJvBR93r68eJB6Kp6h8vra8RvekK8i8Y");
             Console.ReadLine();

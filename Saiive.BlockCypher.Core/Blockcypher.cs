@@ -313,7 +313,16 @@ namespace Saiive.BlockCypher.Core
                 Debug.WriteLine("BlockCypher Response:\n{0}", content);
 
             if (EnsureSuccessStatusCode)
-                response.EnsureSuccessStatusCode();
+            {
+                try
+                {
+                    response.EnsureSuccessStatusCode();
+                }
+                catch(HttpRequestException ex)
+                {
+                    throw new EndpointException(content, response.StatusCode, ex);
+                }
+            }
 
             if (ThrottleRequests > 0)
                 await Task.Delay(ThrottleRequests);
